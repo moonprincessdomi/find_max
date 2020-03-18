@@ -3,15 +3,15 @@
 {% block body %}
 {{form_start(form)}}
 <div class = "container">
-    <table class ="table">
-        <tr>
-            <td><label>Wejście</label>{{form_widget(form.task)}}</td>
-            <td><label>Maksymalna wartość<br></label><p>{{output}}</p></td>
-        </tr>
-        </tr>
-            <td>{{form_row(form.save)}}</td>
-        </tr>
-    </table>
+    <div>
+        <label>Wejście</label>{{form_widget(form.task)}}   
+    </div>
+    <div>
+        <label>Maksymalna wartość<br></label><p>{{output}}</p>
+    </div>
+    <div>
+        {{form_row(form.save)}}
+    </div>
 </div>
 {{form_end(form, {'render_rest': false})}}
 {% endblock %}
