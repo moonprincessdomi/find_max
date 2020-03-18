@@ -17,6 +17,8 @@ class Controller extends AbstractController
         
         $form->handleRequest($request);
 
+        $max = [];
+
         if ($form->isSubmitted() && $form->isValid()) {
 
             $task = $form->getData();
